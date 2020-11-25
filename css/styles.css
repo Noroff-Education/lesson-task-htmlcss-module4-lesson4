@@ -1,0 +1,109 @@
+@import "imports/links.css";
+@import "imports/variables.css";
+
+@font-face {
+  font-family: "Boots And Spurs";
+  src: url("../fonts/BootsAndSpurs.ttf") format("truetype");
+}
+
+body {
+  font-family: var(--text-paragraph), Verdana, Geneva, Tahoma, sans-serif;
+  min-height: 100vh;
+  margin: 0px;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+h1,
+h2,
+.logo {
+  font-family: var(--text-heading), "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+}
+
+.product-list h2 {
+  font-family: var(--text-paragraph), Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+nav {
+  margin-left: 25px;
+  display: none;
+  position: fixed;
+  top: 45px;
+  background: var(--color-header-footer);
+  z-index: 1000;
+  right: 0px;
+}
+
+nav ul {
+  padding: 0px;
+}
+
+nav li {
+  display: block;
+  padding: 20px 30px;
+}
+
+#hamburger-menu {
+  display: none;
+}
+
+#hamburger-menu:checked ~ nav {
+  display: block;
+}
+
+header,
+footer {
+  background-color: var(--color-header-footer);
+  color: #fff;
+}
+
+img {
+  width: 100%;
+}
+
+.reviews {
+  background-color: #e8e8e8;
+}
+
+.products {
+  background-color: #fbfbfb;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+}
+
+.products img {
+  grid-column: -1/1;
+}
+
+.products h2,
+.products h3,
+.products p {
+  grid-column: 1;
+  font-size: 0.9em;
+  margin: 5px;
+}
+
+.products--sale {
+  display: flex;
+}
+
+.old-price {
+  text-decoration: line-through;
+}
+
+.cta-sale {
+  background-color: #127300;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+}
